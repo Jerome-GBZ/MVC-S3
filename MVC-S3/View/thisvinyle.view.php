@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="../View/img/logo2.jpg" />
     <title>Play</title>
     <style>
     .arrow{
@@ -85,7 +86,7 @@
            ";
 
 
-echo "<div class=\"centesssr\">";
+echo "<div class=\"center\">";
 echo "
       <a href=\"../Controler/shops.ctrl.php?firstId=0&genre=",$genre,"\">
         <button class=\"button gris petit\">
