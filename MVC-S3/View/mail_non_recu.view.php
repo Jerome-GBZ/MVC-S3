@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Le viny - Mail non recu</title>
     <link rel="stylesheet" type="text/css" href="../View/inscription.css"/>
-    <link rel="icon" href="../img/logo2.jpg" />
+    <link rel="icon" href="../View/img/logo2.jpg" />
   </head>
   <body>
     <h1>Bonjour</h1>

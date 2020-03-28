@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Le Viny - inscription</title>
     <link rel="stylesheet" type="text/css" href="../View/inscription.css"/>
-    <link rel="icon" href="../img/logo2.jpg" />
+    <link rel="icon" href="../View/img/logo2.jpg" />
   </head>
   <body>
     <script type="text/javascript" src="../js/verif_mdp.js"> </script>
@@ -45,7 +45,7 @@
               echo "<p id=\"Erreur1\">",$this->erreur,"</p>";
            }
            if(isset($this->chargement)) {
-              echo "<img src=\"../img/spin.gif\" alt=\"\">";
+              echo "<img src=\"../View/img/spin.gif\" alt=\"\">";
            }
          ?>
 
