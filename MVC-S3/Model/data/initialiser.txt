@@ -1,0 +1,14 @@
+sqlite 3 vinyle.db
+
+.read create.sql
+
+.separator |
+.import vinyles.txt vinyle
+
+.separator |
+.import membres.txt membres
+
+select * from membres;
+select id from membres;
+
+.quit

@@ -1,0 +1,2 @@
+1|gbz|jerome|jerome@gmail.com|1|123456789|1
+2|pmt|romain|romain@gmail.com|1|123456789|0
