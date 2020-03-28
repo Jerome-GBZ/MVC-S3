@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../View/connexion.css" />
-    <link rel="icon" href="../img/logo2.jpg" />
+    <link rel="icon" href="../View/img/logo2.jpg" />
     <title>Le Viny - Connexion</title>
   </head>
   <body>
