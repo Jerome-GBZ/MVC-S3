@@ -5,14 +5,18 @@
   include("../Framework/view.class.php");
 
   $view = new View("../View/mail_non_recu.view.php");
+  // on recupère le membre connecté que l'on de serialize
   $m = unserialize($_SESSION['unMembre']);
 
   if(isset($m)) {
       // On cree un objet membre
       $membres = new MembresDAO();
+      // on peut le cree en objet memebre evec l'eamail pour etre sur que toute les information soit a jour
+      // si le membre a confirmer son mail entre temps il faut actualiser c'est donne car la session date de l'inscription
       $unMembre = $membres->getMembres($m->getemail());
-
+      // on test si sont mail a pas ete deja verifier si = 0 veut dire que non
       if ($unMembre->getmail_verif() == 0) {
+        // on lui envoie un autre mail de confirmation si il a supprimé le mail ou pas recu
         $membres->envoieUnMailConfirmation($unMembre);
 
         $erreur1 = "vue que les mail ne fonctionneront pas si on est pas sur le d'autre machine que la notre nous mettons en place un bouton pour confirmer son mail";

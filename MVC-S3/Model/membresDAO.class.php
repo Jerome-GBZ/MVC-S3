@@ -11,6 +11,7 @@
       }
     }
 
+    // fonction lors des test pour contraire tous les membres inscrits
     function getAllMembres() {
       $reqAllMembres = "SELECT * FROM membres";
       $req_getAllMembres = $this->db->prepare($reqAllMembres);
@@ -19,6 +20,7 @@
       return $res_getAllMembres;
     }
 
+    // cree des objets membres a partir de leur email
     function getMembres(string $email):Membres {
       $reqMembres = "SELECT * FROM membres WHERE email = :email";
       $req_getMembres = $this->db->prepare($reqMembres);
@@ -28,7 +30,7 @@
       return $res_getMembres[0];
     }
 
-    // cette fonction va avoir pour but de verifier si l'email existe deja en gros si lutilitateur a deja un compte
+    // cette fonction va avoir pour but de verifier si l'email existe deja donc si lutilitateur a deja un compte
     function verfieEmailExist(string $email):int {
       $reqmail = $this->db->prepare("SELECT * FROM membres WHERE email = ?"); // remplacer "" par '' ?
       $reqmail->execute(array($email));
@@ -45,7 +47,9 @@
       return $res;
     }
 
+    // inscrire le mebre dans la base de donner a l'aide d'un insert into
     function inscrireUnMembre(STRING $name, STRING $prenom, STRING $email, STRING $mdp_hash):void {
+      // on genere un id aleatoire qui sera unique
       $id = uniqid();
       $email_verif = 0;
       $newsletters = 1;
@@ -61,6 +65,7 @@
           'email_verif' => $email_verif));
     }
 
+    // fonction pour envoyer des mail avec un membre ne parametre
     function envoieUnMailConfirmation(Membres $m):void {
       $email = $m->getemail();
 
@@ -84,14 +89,19 @@
       </html>
       ';
 
+      // fonction php pour envoyer un mail ne fonctionne pas en local car on doit posseder un serveur smtp
+      // pour remdedier a ca nous avons modifier les fichier de notre WAMP le probleme il faut que la personne qui lance
+      // le site il doit faire de meme...
       mail($email, "Confirmation de compte - Projet PHP", $message, $header);
     }
 
+    // fuction qui permet de mettre a jour la collone mail_verif a laide dun update
     function update_mail_confirmation(Membres $m):void {
       $updateMembre = $this->db->prepare("UPDATE membres SET mail_verif = '1' WHERE name = ? AND email = ? AND id = ?");
       $updateMembre->execute(array($m->getname(), $m->getemail(), $m->getid()));
     }
 
+    // fonction qui permet de delete un membre lors de nos test 
     function delete_un_membre(Membres $m):void {
       $deleteMembre = $this->db->prepare("DELETE FROM membres WHERE id = ? AND email = ?");
       $deleteMembre->execute(array($m->getid(), $m->getemail()));

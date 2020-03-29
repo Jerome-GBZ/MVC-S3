@@ -41,6 +41,7 @@
          </form>
 
          <?php
+            //si on recois un message derreur l'afficher
            if(isset($this->erreur)) {
               echo "<p id=\"Erreur1\">",$this->erreur,"</p>";
            }

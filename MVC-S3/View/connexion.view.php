@@ -35,6 +35,7 @@
         </div>
 
         <?php
+           //si on recois un message derreur l'afficher
            if(isset($this->erreur1)) {
               echo "<p id=\"Erreur1\">",$this->erreur1,"</p>";
            }

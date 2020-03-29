@@ -9,6 +9,7 @@
   <body>
     <h1>Bonjour</h1>
     <?php
+      //si on recois un message derreur l'afficher
       if(isset($this->erreur)) {
          echo "<p id=\"Erreur1\">",$this->erreur,"</p>";
       }

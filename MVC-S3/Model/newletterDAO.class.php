@@ -33,6 +33,7 @@
       return $res;
     }
 
+    // 
     function envoieUnMail($mail):VOID {
       $header="MIME-Version: 1.0\r\n";
       $header.='From:"Projet php"<projet.php.mail@gmail.com>'."\n";
