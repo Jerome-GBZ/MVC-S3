@@ -2,6 +2,7 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="../View/img/logo2.jpg" />
     <link rel="stylesheet" type="text/css" href="menu-deroulant.css">
     <style>
         *{
@@ -186,11 +187,11 @@ color:#fff;
 
         echo "<h2>
                   <a href=\"../Controler/shops.ctrl.php?firstId=",$this->prev,"&genre=",$this->genre,"\">
-                    <img class=\"arrow\" src=\"../View/gauche.png\" alt=\"\">
+                    <img class=\"arrow\" src=\"../View/img/gauche.png\" alt=\"\">
                   </a>
                   $this->currentPage
                   <a href=\"../Controler/shops.ctrl.php?firstId=",$this->next,"&genre=",$this->genre,"\">
-                    <img class=\"arrow\" src=\"../View/droite.png\" alt=\"\">
+                    <img class=\"arrow\" src=\"../View/img/droite.png\" alt=\"\">
                   </a>
               </h2>";
 
