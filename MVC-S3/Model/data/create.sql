@@ -18,7 +18,11 @@ CREATE TABLE membres (
   mail_verif INTEGER
 );
 
-CREATE TABLE newsletters (
+CREATE TABLE contact (
   id STRING,
-  email STRING
+  idmembre STRING,
+  message STRING,
+  messagereponse STRING,
+  datemessage STRING,
+  datereponse STRING
 );

@@ -12,7 +12,7 @@
     }
 
     // fonction lors des test pour contraire tous les membres inscrits
-    function getAllMembres() {
+    function getAllMembres():array {
       $reqAllMembres = "SELECT * FROM membres";
       $req_getAllMembres = $this->db->prepare($reqAllMembres);
       $req_getAllMembres->execute();
@@ -101,7 +101,7 @@
       $updateMembre->execute(array($m->getname(), $m->getemail(), $m->getid()));
     }
 
-    // fonction qui permet de delete un membre lors de nos test 
+    // fonction qui permet de delete un membre lors de nos test
     function delete_un_membre(Membres $m):void {
       $deleteMembre = $this->db->prepare("DELETE FROM membres WHERE id = ? AND email = ?");
       $deleteMembre->execute(array($m->getid(), $m->getemail()));
