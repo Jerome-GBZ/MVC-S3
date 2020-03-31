@@ -1,5 +1,5 @@
 <?php
-class MembresDAO {
+class ContactDAO {
   private $db;
 
   function __construct(){
@@ -29,6 +29,34 @@ class MembresDAO {
     $res_getContact = $req_getContact->fetchAll(PDO::FETCH_CLASS, 'Contact');
     return $res_getContact[0];
   }
+
+  // rajouter un message quuand on la recu
+  function ajoutcontact(Membre $m, STRING $message, STRING $typeQuestion):void {
+    // on genere un id aleatoire qui sera unique
+    $id = uniqid();
+    $idmembre = $m->getid();
+    $reponse = "Votre message n'a pas encore été lu !"; // vide de base
+    $datemessage = date('d/m/Y - H:i');
+    $datereponse = "";
+
+    $requette = $this->db->prepare('INSERT INTO contact VALUES(:id, :idmembre, :typeQuestion, :message, :datemessage, :reponse, :datereponse)');
+    $requette->execute(array(
+        'id' => $id,
+        'idmembre' => $idmembre,
+        'typeQuestion' => $typeQuestion,
+        'message' => $message,
+        'datemessage' => $datemessage,
+        'reponse' => $reponse,
+        'datereponse' => $datereponse));
+  }
+
+  // fuction qui permet de mettre a jour la collone mail_verif a laide dun update
+  function update_reponse(Contact $c, $reponse):void {
+    $datereponse = date('d/m/Y - H:i');
+    $updatecontact = $this->db->prepare("UPDATE contact SET reponse = ?, datereponse = ? WHERE id = ? AND idmembre = ?");
+    $updatecontact->execute(array($reponse, $datereponse, $c->getid(), $c->getidmembre()));
+  }
+
 
 }
 

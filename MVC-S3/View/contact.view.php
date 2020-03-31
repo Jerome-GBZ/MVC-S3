@@ -17,7 +17,7 @@
             <form method="post" action="" name="contact-nous">
                 <section id="infoperso1">
                     <class class="Autres">
-                      <h3>je place la phrase ici ca va donner quoui</h3>
+                      <h3>si je place la phrase ici ca va donner quoui</h3>
                       <select name="choix[]" size="1" />
                           <option value="a">Une question sur nos produits ?</option>
                           <option value="b">Un problème sur notre site ?</option>

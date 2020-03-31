@@ -21,8 +21,9 @@ CREATE TABLE membres (
 CREATE TABLE contact (
   id STRING,
   idmembre STRING,
+  typeQuestion STRING,
   message STRING,
-  messagereponse STRING,
   datemessage STRING,
+  reponse STRING,
   datereponse STRING
 );
