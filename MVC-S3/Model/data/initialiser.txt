@@ -1,4 +1,4 @@
-sqlite 3 vinyle.db
+sqlite3 vinyles.db
 
 .read create.sql
 

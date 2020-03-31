@@ -13,16 +13,25 @@ class ContactDAO {
 
   // fonction pour voir tous les messages de Contact envoyer
   function getAllContact():array {
-    $reqAllMembres = "SELECT * FROM contact";
+    $reqAllMembres = "SELECT * FROM contact ORDER BY datemessage DESC limit 1";
     $req_getAllContact = $this->db->prepare($reqAllMembres);
     $req_getAllContact->execute();
     $res_getAllContact = $req_getAllContact->fetchAll();
     return $res_getAllContact;
   }
 
-  // cree des objets membres a partir de leur email
-  function getContact(string $id):Contact {
-    $reqMembres = "SELECT * FROM membres WHERE id = :id";
+
+  function getContact(string $idmembre):Contact {
+    $reqMembres = "SELECT * FROM contact WHERE idmembre = :idmembre";
+    $req_getContact = $this->db->prepare($reqMembres);
+    $req_getContact->BindParam(':idmembre', $idmembre);
+    $req_getContact->execute();
+    $res_getContact = $req_getContact->fetchAll(PDO::FETCH_CLASS, 'Contact');
+    return $res_getContact[0];
+  }
+
+  function getContactid(string $id):Contact {
+    $reqMembres = "SELECT * FROM contact WHERE id = :id";
     $req_getContact = $this->db->prepare($reqMembres);
     $req_getContact->BindParam(':id', $id);
     $req_getContact->execute();
@@ -31,13 +40,12 @@ class ContactDAO {
   }
 
   // rajouter un message quuand on la recu
-  function ajoutcontact(Membre $m, STRING $message, STRING $typeQuestion):void {
+  function ajoutcontact(STRING $idmembre, STRING $message, STRING $typeQuestion):void {
     // on genere un id aleatoire qui sera unique
     $id = uniqid();
-    $idmembre = $m->getid();
     $reponse = "Votre message n'a pas encore été lu !"; // vide de base
     $datemessage = date('d/m/Y - H:i');
-    $datereponse = "";
+    $datereponse = "...";
 
     $requette = $this->db->prepare('INSERT INTO contact VALUES(:id, :idmembre, :typeQuestion, :message, :datemessage, :reponse, :datereponse)');
     $requette->execute(array(
@@ -56,8 +64,6 @@ class ContactDAO {
     $updatecontact = $this->db->prepare("UPDATE contact SET reponse = ?, datereponse = ? WHERE id = ? AND idmembre = ?");
     $updatecontact->execute(array($reponse, $datereponse, $c->getid(), $c->getidmembre()));
   }
-
-
 }
 
 ?>

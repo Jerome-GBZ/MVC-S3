@@ -37,7 +37,7 @@
                        // nous utilisons cette function pour faire passer l'bojet memebre. car un objet utilise des poiteurs.
                        $_SESSION['unMembre'] = serialize($UnMembre);
                        // une fois connecté on rediriger sur la page de shops
-                       header("Location: shops.ctrl.php");
+                       header("Location: ../index.php");
                   } else {
                      $erreur1 = "Mauvais mot de passe !";
                      $view->erreur1 = $erreur1;
