@@ -74,12 +74,13 @@
   <body>
     <div class="top">
       <h1>VINY</h1>
-      <button class="button gris ">Accueil</button>
-
+      <a href="..">
+        <button class="button gris ">Accueil</button>
+      </a>
 
     <?php
       echo "
-      <a href=\"../Controler/shops.ctrl.php?firstId=",$this->firstId,"&genre=",$this->genre,"\">
+      <a href=\"../Controler/shops.ctrl.php?firstId=1&genre=",$this->genre,"\">
         <button class=\"button gris\">Retour</button>
       </a>
             </div>
