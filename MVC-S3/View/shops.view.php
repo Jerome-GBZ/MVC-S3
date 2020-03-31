@@ -156,7 +156,9 @@ color:#fff;
   <body>
     <div class="top">
       <h1>VINY</h1>
-      <button class="button gris ">Accueil</button>
+      <a href="..">
+        <button class="button gris ">Accueil</button>
+      </a>
       <div id="menu-deroulant">
         <li><a href="#">Genre</a>
           <ul>
