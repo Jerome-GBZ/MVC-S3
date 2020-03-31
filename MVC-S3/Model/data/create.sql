@@ -27,3 +27,13 @@ CREATE TABLE contact (
   reponse STRING,
   datereponse STRING
 );
+
+CREATE TABLE magasin (
+  id INTEGER,
+  pays STRING,
+  ville STRING,
+  codePostal STRING,
+  adresse STRING,
+  url STRING,
+  description STRING
+);
