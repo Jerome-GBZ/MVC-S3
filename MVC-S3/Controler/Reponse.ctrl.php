@@ -7,8 +7,9 @@
   include("../Framework/view.class.php");
 
   $view = new View("../View/reponse.view.php");
-  $m = unserialize($_SESSION['unMembre']);
+  
   if (isset($_SESSION['unMembre'])) {
+    $m = unserialize($_SESSION['unMembre']);
     // On cree un objet membre
     $membres = new MembresDAO();
     // on peut le cree en objet memebre evec l'eamail pour etre sur que toute les information soit a jour

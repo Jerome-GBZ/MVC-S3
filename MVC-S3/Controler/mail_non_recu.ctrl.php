@@ -6,9 +6,8 @@
 
   $view = new View("../View/mail_non_recu.view.php");
   // on recupère le membre connecté que l'on de serialize
-  $m = unserialize($_SESSION['unMembre']);
-
   if(isset($_SESSION['unMembre'])) {
+      $m = unserialize($_SESSION['unMembre']);
       // On cree un objet membre
       $membres = new MembresDAO();
       // on peut le cree en objet memebre evec l'eamail pour etre sur que toute les information soit a jour
