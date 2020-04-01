@@ -79,6 +79,7 @@
       </a>
 
     <?php
+
       echo "
       <a href=\"javascript:history.go(-1)\">
         <button class=\"button gris\">Retour</button>
@@ -97,7 +98,7 @@ echo "
       echo "<h2><strong>$this->titre </strong></h2>";
       echo("<img src=\"http://$this->url\" style = \"width:200px; height:200px\">");
       echo "<p>$this->auteur</p>";
-      echo "<p><strong>$this->prix €</strong></p>";
+      echo "<p><strong>$this->prix € $this->txt_reduction</strong></p>";
 
 
   echo "<div class=\"description\">";
