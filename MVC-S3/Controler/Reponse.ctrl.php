@@ -7,8 +7,14 @@
   include("../Framework/view.class.php");
 
   $view = new View("../View/reponse.view.php");
+  $config = parse_ini_file('../Config/config.ini');
+
+
 
   if (isset($_SESSION['unMembre'])) {
+    // On cree une variable message dans la vue vide car meme si il n'y a pas de message(s) on auras pas d'erreur.
+    $view->message = '';
+
     $m = unserialize($_SESSION['unMembre']);
     // On cree un objet membre
     $membres = new MembresDAO();
@@ -18,7 +24,7 @@
     // si l'utilisateur est un admin il n'y en a qu'un seul
     // il a acces a toute les demande de contact :
     $contact = new ContactDAO();
-    if ($unMembre->getid() == '5e7e5af311095' and $unMembre->getemail() == 'admin@leviny.fr') {
+    if ($unMembre->getid() == $config['id_admin'] and $unMembre->getemail() == $config['mail_admin']) { //id: 5e7e5af311095  // mail: admin@leviny.fr  //var_dump($config);
       $lescontacts = $contact->getAllContact();
       $view->objetReponses = $lescontacts;
       $view->admin = $unMembre->getid();
