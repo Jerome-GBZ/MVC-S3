@@ -10,7 +10,6 @@
     <div class="titre">
       <h1> Toute les reponses aux questions !</h1>
       <a href="index.ctrl.php"><h2>retour à l'accueil</h2></a>
-
     </div>
     <?php
       if (isset($this->objetReponses)) {

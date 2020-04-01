@@ -13,6 +13,7 @@
             <div class="titre">
                 <h1> Page de Contact </h1>
                 <h2> Si vous avez une question ou détecter un quelconque problème sur notre site merci de nous informer à l'aide de ce formulaire de contact. </h2>
+                <a href="index.ctrl.php"><h2>retour à l'accueil</h2></a>
             </div>
             <?php
                 if(isset($this->erreur)) {
@@ -39,8 +40,9 @@
                           </class>
                       </section>
                   </form>";
-
-                  echo '<p id="erreur">'.$this->erreur1.'</p>';
+                  if (isset($this->erreur1)) {
+                    echo '<p id="erreur">'.$this->erreur1.'</p>';
+                  }
                   if (isset($this->valider)) {
                     echo "<p id=\"valider\">$this->valider<a href=\"reponse.ctrl.php\"> Les réponses </a></p>";
                   }

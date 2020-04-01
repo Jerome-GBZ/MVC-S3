@@ -7,7 +7,7 @@
   include("../Framework/view.class.php");
 
   $view = new View("../View/reponse.view.php");
-  
+
   if (isset($_SESSION['unMembre'])) {
     $m = unserialize($_SESSION['unMembre']);
     // On cree un objet membre
@@ -24,6 +24,7 @@
       $view->admin = $unMembre->getid();
       if (isset($_POST['formContact'])) {
         $message = htmlspecialchars($_POST['user_message']);
+        $view->message = $message;
         $id = htmlspecialchars($_POST['id']);
         $c = $contact->getContactid($id);
         $contact->update_reponse($c, $message);
