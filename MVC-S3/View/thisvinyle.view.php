@@ -77,7 +77,6 @@
       <a href="..">
         <button class="button gris ">Accueil</button>
       </a>
-
     <?php
 
       echo "
