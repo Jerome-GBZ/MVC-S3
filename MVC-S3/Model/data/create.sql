@@ -36,4 +36,4 @@ CREATE TABLE magasin (
   adresse STRING,
   url STRING,
   description STRING
-);
+)
