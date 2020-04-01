@@ -6,9 +6,8 @@
 
   $view = new View("../View/index.view.php");
 
-  $m = unserialize($_SESSION['unMembre']);
-  
   if(isset($_SESSION['unMembre'])) {
+    $m = unserialize($_SESSION['unMembre']);
     $view->name = $m->getname();
   }
 
