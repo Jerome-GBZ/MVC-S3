@@ -46,12 +46,14 @@ if($genre == "nothing"){
 
   $tab = $vinyle->getGenre($genre);
 
-  for ($i=$firstId; $i < $lastId; $i++) {
+  for ($i=$firstId-1; $i < $lastId -1; $i++) {
     $m = $tab[$i];
-    $list[$i] = $m->getUrl();
+    $list[$m->getId()] = $m->getUrl();
   }
 
 }
+//var_dump($tab);
+
 
 $view = new View('../View/shops.view.php');
 $view->prev = $prev;

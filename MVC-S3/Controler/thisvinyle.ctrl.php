@@ -30,6 +30,7 @@
 
 
   $view = new View("../View/thisvinyle.view.php");
+  $view->id = $id;
   $view->genre = $genre;
   $view->url = $url;
   $view->description = $desc;

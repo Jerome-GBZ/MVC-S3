@@ -80,7 +80,7 @@
 
     <?php
       echo "
-      <a href=\"../Controler/shops.ctrl.php?firstId=1&genre=",$this->genre,"\">
+      <a href=\"javascript:history.go(-1)\">
         <button class=\"button gris\">Retour</button>
       </a>
             </div>
@@ -89,7 +89,7 @@
 
 echo "<div class=\"center\">";
 echo "
-      <a href=\"../Controler/shops.ctrl.php?firstId=0&genre=",$genre,"\">
+      <a href=\"../Controler/shops.ctrl.php?firstId=1&genre=",$genre,"\">
         <button class=\"button gris petit\">
           $this->genre
         </button>

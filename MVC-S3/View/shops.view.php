@@ -188,11 +188,11 @@ color:#fff;
       echo "</div>";
 
         echo "<h2>
-                  <a href=\"../Controler/shops.ctrl.php?firstId=",$this->prev,"&genre=",$this->genre,"\">
+                  <a href=\"?firstId=",$this->prev,"&genre=",$this->genre,"\">
                     <img class=\"arrow\" src=\"../View/img/gauche.png\" alt=\"\">
                   </a>
                   $this->currentPage
-                  <a href=\"../Controler/shops.ctrl.php?firstId=",$this->next,"&genre=",$this->genre,"\">
+                  <a href=\"?firstId=",$this->next,"&genre=",$this->genre,"\">
                     <img class=\"arrow\" src=\"../View/img/droite.png\" alt=\"\">
                   </a>
               </h2>";
