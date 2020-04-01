@@ -13,8 +13,8 @@
 
     </div>
     <?php
-      $tab = $this->objetReponses;
-      if (isset($tab)) {
+      if (isset($this->objetReponses)) {
+        $tab = $this->objetReponses;
         foreach ($tab as $key => $value) {
             echo " <div id=\"message\">
             <p id=\"idmessage\">numéro de la demande : ".$value['id']."</p>
