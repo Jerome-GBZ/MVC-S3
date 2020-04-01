@@ -15,7 +15,7 @@
     $genre = $_GET['genre'];
   }
 
-  $config = parse_ini_file('../Config/config.ini');
+
   $vinyle = new VinyleDAO();
   $m = $vinyle->get($id);
   $url = $m->getUrl();

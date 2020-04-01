@@ -3,7 +3,7 @@ require_once ("../Model/vinyle.class.php");
 require_once ("../Model/vinyleDAO.class.php");
 include("../Framework/view.class.php");
 
-$config = parse_ini_file('../Config/config.ini');
+
 $vinyle = new VinyleDAO();
 
 
