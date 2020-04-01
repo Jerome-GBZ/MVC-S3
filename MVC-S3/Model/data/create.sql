@@ -27,6 +27,7 @@ CREATE TABLE contact (
   reponse STRING,
   datereponse STRING
 );
+<<<<<<< HEAD
 
 CREATE TABLE magasin (
   id INTEGER,
@@ -37,3 +38,5 @@ CREATE TABLE magasin (
   url STRING,
   description STRING
 )
+=======
+>>>>>>> e930f3f6b08c51503c35f0f4699fa0505174afec

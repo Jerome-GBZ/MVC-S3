@@ -3,7 +3,7 @@
     private $id;
     private $idmembre;
     private $message;
-    private $messagereponse;
+    private $reponse;
     private $datemessage;
     private $datereponse;
 
@@ -16,7 +16,7 @@
     function getmessage():string {
       return $this->message;
     }
-    function getmessagereponse():string {
+    function getreponse():string {
       return $this->messagereponse;
     }
     function getdatemessage():string {
