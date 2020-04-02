@@ -24,7 +24,7 @@
                   <div class="text">Shop</div>
                 </a>
 
-                <a href="stores.ctrl.php" class="home-pochette" id="pochette_2">
+                <a href="magasins.ctrl.php" class="home-pochette" id="pochette_2">
                   <div class="bg">
                         <img width="200px" height="auto" src="../View/img/index/svg/Bad.svg" alt="">
                   </div>

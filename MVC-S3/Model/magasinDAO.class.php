@@ -3,7 +3,7 @@
     private $db;
 
     function __construct(){
-      $database = 'sqlite:data/magasins.db';
+      $database = 'sqlite:'.dirname(__FILE__).'/data/vinyles.db';
       try {
         $this->db = new PDO($database);
       } catch (\PDOException $e) {

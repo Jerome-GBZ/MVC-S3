@@ -12,7 +12,7 @@
     $magasins[$i] = $magasinDAO->get($i);
   }
 
-  $view = new View(dirname(__FILE__).'/../View/magasins.view.php');
+  $view = new View('/../View/magasins.view.php');
   $view->magasins = $magasins;
 
   $view->show();
