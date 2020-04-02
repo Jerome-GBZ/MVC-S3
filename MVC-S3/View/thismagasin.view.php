@@ -50,8 +50,14 @@
                     "</div>";; ?>
     </p>
 
-    <a href="..">
-      <button class="button gris ">Accueil</button>
-    </a>
+    <div class="">
+      <a href="..">
+        <button class="button gris ">Accueil</button>
+      </a>
+      <a href="../Controler/magasins.ctrl.php">
+        <button class="button gris ">Retour</button>
+      </a>
+    </div>
+
   </body>
 </html>
