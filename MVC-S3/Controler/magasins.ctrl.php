@@ -1,10 +1,7 @@
 <?php
-  $cheminMagasin = dirname(__FILE__)."../Model/magasin.class.php";
-  $cheminMagasinDAO = dirname(__FILE__)."../Model/magasinDAO.class.php";
-  $cheminFramework = dirname(__FILE__)."../Framework/view.class.php";
-  require_once($cheminMagasin);
-  require_once($cheminMagasinDAO);
-  include($cheminFramework);
+  require_once("../Model/magasin.class.php");
+  require_once("../Model/magasinDAO.class.php");
+  include("../Framework/view.class.php");
 
   $magasinDAO = new MagasinDao();
 
