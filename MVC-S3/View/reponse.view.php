@@ -28,7 +28,7 @@
               echo "<form method=\"post\" action=\"\" name=\"contact-nous\">
                   <section id=\"infoperso1\">
                       <class class=\"Autres\">
-                        <textarea id=\"msg\" name=\"user_message\"  resize:both minlength=\"10\" placeholder=\"Votre message ...\" value=\"<?php if(isset($this->message) && ($this->message != '')) {echo $this->message;} ?>\"></textarea>
+                        <textarea id=\"msg\" name=\"user_message\"  resize:both minlength=\"10\" placeholder=\"Votre message ...\" value=\"<?php if(isset($this->message) && ($this->message != '')) {echo $this->message;} ?>\"></textarea> 
                         <h3>Repondre a la question ici</h3>
                       </class>
                       <input id=\"id\" name=\"id\" type=\"hidden\" value=\"".$value['id']."\">
