@@ -25,11 +25,11 @@
         background-color: #4CAF50; /* Green */
         border: none;
         color: white;
-        padding: 15px 32px;
+        padding: 10px 20px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-size: 14px;
         margin: 4px 2px;
         cursor: pointer;
       }
@@ -38,6 +38,14 @@
     </style>
   </head>
   <body>
+    <div class="">
+      <a href="..">
+        <button class="button gris ">Accueil</button>
+      </a>
+      <a href="../Controler/magasins.ctrl.php">
+        <button class="button gris ">Retour</button>
+      </a>
+    </div>
     <div class="">
       <img src="<?php echo "$this->drapeau"; ?>" alt="" style="width:75px; height:50px">
       <h1>Viny <?php echo " $this->pays"; ?></h1>
@@ -49,15 +57,6 @@
                     ("<table width=\"100%\" border =\"1\" cellspacing=\"1\" cellpadding=\"5\"><tr><td>$this->description</td><tr></table>"),
                     "</div>";; ?>
     </p>
-
-    <div class="">
-      <a href="..">
-        <button class="button gris ">Accueil</button>
-      </a>
-      <a href="../Controler/magasins.ctrl.php">
-        <button class="button gris ">Retour</button>
-      </a>
-    </div>
 
   </body>
 </html>
