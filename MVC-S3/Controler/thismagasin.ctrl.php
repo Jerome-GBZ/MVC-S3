@@ -30,7 +30,7 @@
     $drapeau = 'https://t4.ftcdn.net/jpg/00/69/39/65/240_F_69396539_OlrKk7npVhoWMJWzXd2pYZiNJVcjpnq4.jpg';
   }
 
-  $view = new View('/../View/thismagasin.view.php');
+  $view = new View('../View/thismagasin.view.php');
   $view->pays = $pays;
   $view->ville = $ville;
   $view->codePostal = $codePostal;

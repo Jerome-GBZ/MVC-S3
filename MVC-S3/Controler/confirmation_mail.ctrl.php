@@ -7,7 +7,7 @@
 
   // on recupère les informations contenue dans lurl
   $name = $_GET['name'];
-  $email = $_GET['email'];
+  $email = strtolower($_GET['email']);
   $id = $_GET['id'];
 
   // on verifie si elle ne sont pas vide
