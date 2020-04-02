@@ -30,7 +30,7 @@
                                 <option value=\"Un problème sur notre site ?\">Un problème sur notre site ?</option>
                                 <option value=\"Autres...\">Autres...</option>
                             </select>
-                            <textarea id=\"msg\" name=\"user_message\"  resize:both minlength=\"10\" placeholder=\"Votre message ...\" value=\"<?php if(isset($this->message)) {echo $this->message;} ?>\"></textarea>
+                            <textarea id=\"msg\" name=\"user_message\"  resize:both minlength=\"10\" placeholder=\"Votre message ...\" value=\"<?php if(isset($this->message) && ($this->message != '')) {echo $this->message;} ?>\"></textarea>
                           </class>
 
                           <class id=\"Boutons\">
