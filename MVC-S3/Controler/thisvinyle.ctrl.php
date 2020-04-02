@@ -2,7 +2,7 @@
   require_once('../Model/vinyleDAO.class.php');
   require_once('../Model/vinyle.class.php');
   include("../Framework/view.class.php");
-  session_start();
+  session_start(); //Demarrage de la session
 
   if (isset($_GET['id'])) {
     $id = $_GET['id'];
