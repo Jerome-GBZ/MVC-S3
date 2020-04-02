@@ -5,7 +5,7 @@
   require_once($cheminMagasin);
   require_once($cheminMagasinDAO);
   include($cheminFramework);
-
+  
   $magasinDAO = new MagasinDao();
 
   for ($i = 1; $i < 5; $i++) {
