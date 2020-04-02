@@ -1,15 +1,7 @@
 <?php
-  $cheminMagasin = "../Model/magasin.class.php";
-  $cheminMagasinDAO = "../Model/magasinDAO.class.php";
-  $cheminFramework = "../Framework/view.class.php";
-  require_once($cheminMagasin);
-  require_once($cheminMagasinDAO);
-  include($cheminFramework);
-
   require_once("../Model/magasin.class.php");
   require_once("../Model/magasinDAO.class.php");
   include("../Framework/view.class.php");
-
 
   $magasinDAO = new MagasinDao();
 
