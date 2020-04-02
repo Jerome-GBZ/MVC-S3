@@ -22,6 +22,7 @@
 
     // cree des objets membres a partir de leur email
     function getMembres(string $email):Membres {
+      $email = strtolower($email);
       $reqMembres = "SELECT * FROM membres WHERE email = :email";
       $req_getMembres = $this->db->prepare($reqMembres);
       $req_getMembres->BindParam(':email', $email);
@@ -32,6 +33,7 @@
 
     // cette fonction va avoir pour but de verifier si l'email existe deja donc si lutilitateur a deja un compte
     function verfieEmailExist(string $email):int {
+      $email = strtolower($email);
       $reqmail = $this->db->prepare("SELECT * FROM membres WHERE email = ?"); // remplacer "" par '' ?
       $reqmail->execute(array($email));
       // $mailexist2 = $reqmail->rowCount(); ne fonctionne pas ! ducoup on utilise le count()
@@ -51,6 +53,7 @@
     function inscrireUnMembre(STRING $name, STRING $prenom, STRING $email, STRING $mdp_hash):void {
       // on genere un id aleatoire qui sera unique
       $id = uniqid();
+      $email = strtolower($email);
       $email_verif = 0;
       $newsletters = 1;
 
