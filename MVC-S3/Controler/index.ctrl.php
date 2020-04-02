@@ -8,6 +8,7 @@
 
   if(isset($_SESSION['unMembre'])) {
     $m = unserialize($_SESSION['unMembre']);
+    var_dump($m);
     $view->name = $m->getname();
   }
 

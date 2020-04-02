@@ -92,7 +92,7 @@
       // fonction php pour envoyer un mail ne fonctionne pas en local car on doit posseder un serveur smtp
       // pour remdedier a ca nous avons modifier les fichier de notre WAMP le probleme il faut que la personne qui lance
       // le site il doit faire de meme...
-      mail($email, "Confirmation de compte - Projet PHP", $message, $header);
+      mail($email, "Confirmation de compte - Le Viny", $message, $header);
     }
 
     // fuction qui permet de mettre a jour la collone mail_verif a laide dun update

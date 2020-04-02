@@ -11,6 +11,7 @@
   if(isset($_SESSION['unMembre'])) {
     // on recupère le membre connecté que l'on de serialize
     $m = unserialize($_SESSION['unMembre']);
+    $view->message = '';
     if(isset($_POST['formContact'])) {
       // On cree un objet membre
       $membres = new MembresDAO();
