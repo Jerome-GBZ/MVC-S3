@@ -28,5 +28,13 @@
       $res = $stmt->fetchAll(PDO::FETCH_CLASS, 'Vinyle');
       return $res;
     }
+
+    function nbElementTotal():int {
+      $req = "SELECT * FROM vinyle";
+      $stmt = $this->db->prepare($req);
+      $stmt->execute();
+      $res = $stmt->fetchAll();
+      return count($res);
+    }
   }
 ?>
