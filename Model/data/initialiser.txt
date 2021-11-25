@@ -1,0 +1,24 @@
+sqlite3 vinyles.db
+
+.read create.sql
+
+.separator |
+.import vinyles.txt vinyle
+
+.separator |
+.import membres.txt membres
+
+.separator |
+.import contact.txt contact
+
+// verfier si tous est bon avec ca :
+select * from vinyle;
+select id from vinyle;
+
+select * from membres;
+select id from membres;
+
+select * from contact;
+select id from contact;
+
+.quit

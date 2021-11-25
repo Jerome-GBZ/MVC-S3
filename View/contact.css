@@ -1,0 +1,173 @@
+#message{
+  margin: auto;
+  width: 50%;
+}
+#idmessage, .reponsemsg:last-child{
+  margin : 0;
+}
+.reponsemsg{
+  text-align: right;
+}
+
+#idmessage{
+  margin-top: 30px;
+}
+
+*{
+  text-decoration: none;
+  color: grey;
+}
+
+html{
+  font-family: Helvetica,Arial,sans-serif;
+  background: linear-gradient(white, #efefef);
+  height: 100%;
+}
+
+#valider > a{
+  text-decoration: none;
+  color:green;
+}
+
+textarea[name=user_message] {
+  resize : none;
+}
+
+#msg{
+  width: 100%;
+  height: 140px;
+  border-radius: 4px;
+  padding: 0px;
+  width: calc(100% - 15px);
+  padding-left: 15px;
+}
+
+#container-contact{
+  width: 95%;
+  margin: auto;
+}
+
+.titre > h1{
+  color: grey;
+  font-size: 1.5em;
+  margin-bottom: 0px;
+}
+
+.titre > h2{
+  color: grey;
+  font-size: 0.7em;
+  margin-top: 0;
+}
+
+.titre > h2 > a{
+  text-decoration: none;
+}
+
+.titre{
+  text-align: center;
+}
+
+.Autres{
+  display:block;
+}
+
+.Autres > h3{
+  margin: 0px;
+  color: grey;
+  font-size: 0.7em;
+  margin-top: 5px;
+  margin-left:10px;
+  margin-bottom: 0px
+}
+
+.Autres > input{
+  height: 35px;
+  width: 100%;
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+}
+
+#infoperso1{
+  width: 80%;
+  margin: auto;
+}
+
+.Autres > h3{
+  margin-bottom: 20px;
+}
+
+#Boutons > p > input{
+  font-size: 17px;
+  background: linear-gradient(#42a1ec,#0070c9);
+  border: 1px solid #07c;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+}
+
+#erreur{
+  text-align: center;
+  color: red;
+}
+
+#valider{
+  text-align: center;
+  color: green;
+}
+
+
+@media screen and (min-width: 720px) and (max-width: 1000px){
+  #container-contact{
+    width: 60%;
+  }
+
+  .titre > h1{
+    font-size: 2.5em;
+  }
+
+  .titre > h2{
+    font-size: 1.0em;
+  }
+
+  .Autres > h3{
+    font-size: 0.8em;
+  }
+
+  .Autres > input{
+    width: 100%;
+  }
+}
+
+
+@media screen and (min-width: 1000px){
+  #container-contact{
+    width: 40%;
+  }
+
+  .titre > h1{
+    font-size: 3em;
+  }
+
+  .titre > h2{
+    font-size: 1.0em;
+  }
+
+  .Autres > h3{
+    font-size: 0.8em;
+  }
+
+  .Autres > input{
+    width: 100%;
+  }
+
+  footer {
+    padding-top: 50px;
+  }
+  #valider{
+    text-align: center;
+    color: green;
+  }
+}
